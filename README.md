@@ -1,11 +1,10 @@
 # Default backend
 
-The default backend is a service which handles all URL paths and hosts the nginx controller doesn't understand
-(i.e., all the requests that are not mapped with an Ingress).
+The default backend is a service which handles all URL paths and hosts the nginx controller doesn't understand (i.e., all the requests that are not mapped with an Ingress).
 
 ## Custom behavior
 
-If a request to this service contains the header `x-original-uri` then it will be forwarded to betty5-app service in the frontend namespace.
+If a request to this service contains the header `x-original-uri` then it will be forwarded to a  service in the defined namespace.
 
 ## Endpoints
 Basically a default backend exposes two URLs:
